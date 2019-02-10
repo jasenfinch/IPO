@@ -8,9 +8,9 @@ Latest release:
 [![Build Status Biocondcutor Release](http://bioconductor.org/shields/build/release/bioc/IPO.svg)](http://bioconductor.org/packages/release/bioc/html/IPO.html)
 Devel: 
 [![Build Status Biocondcutor Devel](http://bioconductor.org/shields/build/devel/bioc/IPO.svg)](http://bioconductor.org/packages/devel/bioc/html/IPO.html)
-[![codecov](https://codecov.io/gh/Bioconductor-mirror/IPO/branch/master/graph/badge.svg)](https://codecov.io/gh/Bioconductor-mirror/IPO/)
+[![codecov](https://codecov.io/gh/jasenfinch/IPO/branch/master/graph/badge.svg)](https://codecov.io/gh/jasenfinch/IPO/)
 @master: 
-[![Build Status Travis-CI](https://travis-ci.org/rietho/IPO.svg?branch=master)](https://travis-ci.org/rietho/IPO)
+[![Build Status Travis-CI](https://travis-ci.org/jasenfinch/IPO.svg?branch=methods)](https://travis-ci.org/jasenfinch/IPO)
 
 
 IPO (‘Isotopologue Parameter Optimization’) is a tool for automated Optimization of [XCMS](http://bioconductor.org/packages/xcms/) Parameters. It is a fast and free of labeling steps, and applicable to data from different kinds of samples and data from different methods of liquid chromatography - high resolution mass spectrometry and data from different instruments.

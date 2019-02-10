@@ -7,20 +7,14 @@ warnings_are_errors: true
 sudo: required
 cache: packages
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install libnetcdf-dev
+apt_packages:
+ - libnetcdf-dev
+ - netcdf-bin
 
-#r_build_args: "--no-build-vignettes"
-#r_check_args: "--no-build-vignettes"
+after_success:
+ - Rscript -e 'covr::codecov()'
 
-# r_packages:
-#  - covr
-
-script: 
-  - |
-    travis_wait 40 R CMD build .
-    travis_wait 40 R CMD check --no-vignettes IPO*tar.gz
-
-#after_success:
-#  - travis_wait 40 Rscript -e 'library(covr); codecov()'
+notifications:
+  email:
+    on_success: change
+    on_failure: change
