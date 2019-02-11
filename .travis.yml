@@ -11,8 +11,18 @@ apt_packages:
  - libnetcdf-dev
  - netcdf-bin
 
-after_success:
- - Rscript -e 'covr::codecov()'
+#r_build_args: "--no-build-vignettes"
+#r_check_args: "--no-build-vignettes"
+
+# r_packages:
+#  - covr
+
+script: 
+  - |
+    travis_wait 40 R CMD build .
+    travis_wait 40 R CMD check --no-vignettes IPO*tar.gz
+#after_success:
+#  - travis_wait 40 Rscript -e 'library(covr); codecov()'
 
 notifications:
   email:
